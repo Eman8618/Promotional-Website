@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html{
+        background:linear-gradient(to bottom right,white,gray);
+        scroll-behavior:smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:rgb(2, 51, 83);
+  height:100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:lightblue;
+  color:darkblue;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color:lightblue;
+  color:darkblue;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+</style>
+<title>E_Repairing</title>
+</head>
+<body>
+
+<div id="mynav" class="navbar" >
+  <a id="m1" class="m active" href="#home">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a id="m2" class="m" href="./airconditioners.html">Air Conditioners Repair</a>
+      <a id="m3" class="m" href="./homeappliances.html">Home Appliances Repair</a>
+    </div>
+  </div> 
+  <a id="m4" class="m" href="./contactus.html">Contact Us</a>
+  <a id="m5" class="m" href="./aboutus.html">About Us</a>
+
+</div>
+<br>
+<br>
+<center><img src="4.jpg" border="5" ></center>
+<center><p><h1>Appliances We Repair</h1>
+    Welcome to E_Repairing!<br>
+    It’s most trusted appliance service and repair solutions. With verified professionals who come to your doorstep across Egypt,
+    you can repair your Washing Machine, Fridge, Microwave Oven, Air Conditioner(AC) and more.<br><br>
+    Whether it’s a noisy AC, leaking fridge or a dead washing machine of any brand or model, we repair them smartly at your convenience.
+    <img src="2.png" width="20%" height="20%" align="left">
+
+</p>
+<p>
+   <h1>Why E_Repairing?</h1> 
+We help you get trusted professionals for all your Home Appliance needs. We connect you to punctual and hardworking experts
+who work towards customer satisfaction and meet all your appliance needs.
+</p>
+</center>
+  
+ <script>
+       // Add active class to the current menu 
+var header = document.getElementById("mynav");
+var btns = header.getElementsByClassName("m");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+ </script>
+</body>
+</html>
